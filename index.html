@@ -3,35 +3,200 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio Website</title>
+  <title>ShopTale</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Kanit", verdana;
+      color: #494348;
+    }
+
+    body {
+      margin-top: 65px;
+      height: 100svh;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #F2D598;
+      padding: 0 15px;
+      /* font-family: verdana; */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1E3942;
+      font-size: larger;
+      /* color: #3DCEC4; */
+    }
+
+    .hero {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      height: 45svh;
+    }
+
+    .hero header {
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .hero header button {
+      padding: 8px 12px;
+      border: none;
+      border-radius: 3px;
+      background-color: #3DCEC4;
+      color: #1E3942;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: all ease-in-out 0.35s;
+    }
+
+    .hero header button:hover {
+      background-color: #1E3942;
+      color: #3DCEC4;
+      cursor: pointer;
+    }
+
+    .hero img {
+      height: 100%;
+    }
+
+    section {
+      height: 45svh;
+      display: flex;
+      width: 90%;
+      margin: 0 auto;
+      /* background-color: rgba(61, 206, 196, 0.531); */
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 3px;
+    }
+
+    .one, .two, .three {
+      width: 25%;
+      border: 1px solid #3DCEC4;
+      padding: 12px;
+      height: 75%;
+      border-radius: 5px;
+      transition: all ease-in-out 0.35s;
+    }
+
+    .one:hover, .two:hover, .three:hover {
+      background-color: #3DCEC4;
+      cursor: pointer;
+    }
+
+    section i {
+      font-size: 2rem;
+    }
+
+    footer {
+      height: 10svh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    @media (max-width: 768px) {
+      nav, .hero, section, footer {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero, section {
+        height: 90svh;
+        /* background-color: #995a38;
+        margin-bottom: 4px; */
+        width: 100%;
+      }
+
+      .hero img {
+        height: 60%;
+      }
+
+      .hero {
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .one, .two, .three {
+        height: 25%;
+        width: 70%;
+        text-align: center;
+      }
+
+      footer {
+        text-align: center;
+      }
+    }
+
+    /* img {
+      width: 35%;
+    } */
+    /* #0070B3 */
+  </style>
 </head>
 <body>
-  <header>
-    <h1>My Portfolio Website Using HTML</h1>
-  </header>
   <nav>
-    <ul>
-      <li>About Me</li>
-      <li>Hobbies</li>
-      <li>Contact</li>
-    </ul>
+    <a href="index.html">ShopTale</a>
+    <a href="#">Check out</a>
   </nav>
+  <div class="hero">
+    <header>
+      <h1>ShopTale</h1>
+      <h3>Experience Optimal Shopping Luxury</h3>
+      <button>Learn More</button>
+    </header>
+    <img src="vecteezy_man-carrying-shopping-bags_24524036.png" alt="Shoptale Hero Image">
+  </div>
   <section>
-    <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg" alt="Profile Image" height="250">
-    <h2>About Me</h2>
-    <p>Hello. I am a passion-driven and easy-going fellow. I love to meet new people and experience new places and cultures. Continuous learning is a deep part of my core values.</p>
-    <h2>My Hobbies</h2>
-    <ul>
-      <li>Writing</li>
-      <li>Reading</li>
-      <li>Coding</li>
-    </ul>
+    <div class="one">
+      <i class='bx bx-category' style='color:#995a38'  ></i>
+      <h3>Shop by Category</h3>
+      <p>You'll find our interface easy to navigate.</p>
+    </div>
+    <div class="two">
+      <i class='bx bx-shape-polygon' style='color:#995a38'></i>
+      <h3>Reliable</h3>
+      <p>All our products are reliable and affordable.</p>
+    </div>
+    <div class="three">
+      <i class='bx bx-bookmark-heart' style='color:#995a38' ></i>
+      <h3>Tested and Trusted</h3>
+      <p>We offer the absolute best and nothing less.</p>
+    </div>
   </section>
+
   <footer>
-    <h2>Here are my Contact Addresses:</h2>
-    <p>E-mail: wabalonline01@gmail.com</p>
-    <a href="http://instagram.com/izhakx/" target="_blank">My Instagram Handle</a>
-    <a href="https://www.facebook.com/dbayor.ishaq" target="_blank">My X Handle</a>
+    <div class="left">
+      <h4>Contact Us:</h4>
+      <p>Phone: 081-4934-4801</p>
+    </div>
+    <div class="right">
+      <p>Copyright &copy; 2025 | ShopTale | All right reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
