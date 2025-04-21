@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>CALCULATOR JS</title>
+        <style type="text/css" media="all">
+            @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: "Kanit", verdana;
+            }
+            .container {
+                width: 100%;
+                height: 100svh;
+                background-color: beige;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .calculator {
+                border-radius: 10px;
+                background-color: black;
+                padding: 5px;
+            }
+            .calculator form div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .calculator .display {
+                display: flex;
+                justify-content: end;
+                margin-bottom: 7px;
+            }
+            .calculator form .display input {
+                width: 100%;
+                text-align: right;
+                font-size: 1.2rem;
+                padding-right: 5px;
+            }
+            .calculator form input {
+                border: none;
+                outline: none;
+                height: 55px;
+                width: 55px;
+                color: beige;
+                background-color: #272822;
+                margin: 3px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator">
+                <form action="" method="get" accept-charset="utf-8">
+                    <div class="display">
+                        <input type="text" name="display" id="display" value="" />
+                    </div>
+                    <div>
+                        <input type="button" name="clear" value="AC" onclick="reset();"/>
+                        <input type="button" name="del" value="DEL" onclick="deleteOne();"/>
+                        <input type="button" value="." onclick="result('.');"/>
+                        <input type="button" value="+" onclick="result('+');"/>
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="result(7);"/>
+                        <input type="button" value="8" onclick="result(8);"/>  
+                        <input type="button" value="9" onclick="result(9);"/>
+                        <input type="button" value="-" onclick="result('-');"/>
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="result(4);"/>
+                        <input type="button" value="5" onclick="result(5);"/>  
+                        <input type="button" value="6" onclick="result(6);"/>
+                        <input type="button" value="*" onclick="result('*');"/>
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="result(1);"/>
+                        <input type="button" value="2" onclick="result(2);"/>  
+                        <input type="button" value="3" onclick="result(3);"/>
+                        <input type="button" value="/" onclick="result('/');"/>
+                    </div>
+                    <div>
+                        <input type="button" value="0" onclick="result(0);" />
+                        <input type="button" value="00" onclick="result('00');"/>  
+                        <input type="button" value="%" onclick="percent();"/>
+                        <input type="button" value="=" onclick="evalAnswer();"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <script>
+            const display = document.getElementById('display');
+
+            const evalAnswer = () => {
+                if (display.value) {
+                    display.value = eval(display.value);
+                } else {
+
+                    display.value = '';
+                }
+            }
+
+            const reset = () => {
+                display.value = '';
+            }
+
+            const deleteOne = () => {
+                display.value = display.value.toString().slice(0, -1);
+            }
+
+            const percent = () => {
+                if (display.value) {
+                    display.value = display.value / 100;
+                    // evalAnswer();
+                }
+                // const percentResult = eval(display.value / 100);
+                // return percentResult;
+            }
+
+            function result(value) {
+                let displayResult = display.value += value;
+                return displayResult;
+            }
+        </script>
+    </body>
+</html>
