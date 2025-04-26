@@ -16,3 +16,26 @@ const Person = {
 console.log(Person.sum());
 console.log(Person.name);
 console.log(5 + 'hello' + 5);
+import { useState } from 'react';
+
+const Home = () => {
+  const [name, setName] = useState('Mario');
+  const [age, setAge] = useState(25);
+  
+  const handleClick = () => {
+    setName('Luigi');
+    setAge(30);
+  }
+
+  return (
+    <div className="home">
+      <p>{ name } is { age } years old.</p>
+      {/* On Button Click - Initial run:
+      Mario is 25 years old.
+      Luigi is 30 years old. */}
+      <button onClick={handleClick}>Click Me</button>
+    </div>
+  );
+}
+
+export default Home;
