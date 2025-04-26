@@ -1,17 +1,14 @@
 import { useState } from 'react';
 
 const Content = () => {
-  // const count = 0;
-
+  
   let [count, setCount] = useState(0);
 
   const increment = () => {
     if (count >= 100) {
       alert('Count cannot exceed 100.')
     } else {
-      count = count + 1;
-      // console.log(count);
-      setCount(count);
+      setCount(count + 1);
     }
   }
 
