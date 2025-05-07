@@ -7,7 +7,7 @@ const ListComponent = ({ files, handleDelete }) => {
           <div className="list-component-preview" key={file.id}>
             {
               file.length === 0 ? (
-                <p>No items found</p>
+                <p>No items found here. Thanks</p>
               ) : 
               (
                 <ul>
