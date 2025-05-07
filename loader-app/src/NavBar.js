@@ -4,7 +4,7 @@ const NavBar = () => {
       <h3>Loader App</h3>
       <div className="right">
         <a href="/">Home</a>
-        <a href="/new">New File</a>
+        <a href="/">New File</a>
       </div>
     </div>
   );
