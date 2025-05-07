@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+* {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+body {
+  font-family: "Tagesschrift", system-ui;
+}
+
+.navbar {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  /* margin: 0 auto; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.navbar h3 {
+  color: #f2f2f2;
+}
+
+.navbar .links {
+  margin-left: auto;
+}
+
+.navbar a {
+  margin-left: 16px;
+  text-decoration: none;
+  padding: 6px;
+  color: #61dafb;
+}
+
+.navbar a:hover {
+  color: #f1356d;
+}
+
+.home button {
+  background-color: #f2f2f2;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 5px;
+}
+
+.home button:hover {
+  background-color: bisque;
+}
+
+.list-component {
+  display: grid;
+  /* grid-template-columns: repeat( 1fr, 4); */
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.list-component .list-component-preview {
+  border-radius: 0.5rem;
+  border: 1px solid #f2f2f2;
+  overflow: hidden;
+}
+
+.list-component .list-component-preview img {
+  width: 100%;
+}
+
+.list-component .list-component-preview ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Dancing Script", cursive
+}
+
+.list-component .list-component-preview h4 {
+  color: #f1356d;
+}
+
+.list-component .list-component-preview button {
+  background-color: #61dafb;
+  padding: 5px 7px;
+  text-transform: uppercase;
+  margin: 4px;
+  border: none;
+  border-radius: 3px;
+  border: 1px solid #f1356d;
+}
+
+.loading, .error {
+  position: absolute;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #282c34;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
