@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import ListComponent from './ListComponent';
-// import PaginatedList from './PaginatedList';
 
 const Home = () => {
   

@@ -109,7 +109,7 @@ body {
   margin: 4px;
   border: none;
   border-radius: 3px;
-  border: 1px solid #f1356d;
+  border: 1px solid beige;
 }
 
 .loading, .error {
@@ -124,10 +124,72 @@ body {
   background-color: #282c34;
 }
 
+.content-list {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 2px solid beige;
+  border-radius: 6px;
+}
+
+.content-list h2 {
+  color: #f1356d;
+}
+
+.content-list div h4 {
+  color: #61dafb;
+  margin: 10px 0;
+  text-transform: uppercase;
+}
+
 .pagination button {
   margin: 3px 3px;
 }
 
+/* Add new data content */
+.content {
+  width: 100%;
+}
+
+.create {
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 15px;
+  border: 2px solid beige;
+  text-align: center;
+  border-radius: 6px;
+}
+
+.create label {
+  text-align: left;
+  display: block;
+}
+
+.create h2 {
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0 20px 0;
+  border: 1px solid beige;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button {
+  background-color: #61dafb;
+  color: beige;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive Screen Design */
 @media (min-width: 501px) and (max-width: 660px) {
   .list-component {
     grid-template-columns: 1fr 1fr;

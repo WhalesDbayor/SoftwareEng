@@ -30,12 +30,12 @@ const ContentList = () => {
     <div className="content-list">
       {error && <div className="error">{ error }</div>}
       {isLoading && <div className="loading">Loading...</div>}
-      <h2>Content list - { id }</h2>
+      <h2>Content number - { id }</h2>
 
-      { files && <ul>
-          <li><h4>{ files.title }</h4></li>
-          <li><p>{ files.body }</p></li>
-      </ul> }
+      { files && <div>
+          <h4>{ files.title }</h4>
+          <p>{ files.body }</p>
+      </div> }
       
     </div>
   );

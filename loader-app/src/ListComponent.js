@@ -46,7 +46,8 @@ const ListComponent = ({ files, handleDelete }) => {
                   <ul>
                     <Link to={`/content/${file.id}`}>
                       <li><h4>{ file.title }</h4></li>
-                      <li><p>{ file.body }</p></li>
+                      <li><p>{file.body.split(' ').slice(0, 6).join(' ') + '...'}</p>
+                      </li>
                     </Link>
                     <li><button onClick={() => handleDelete(file.id)}>Delete</button></li>
                   </ul>
