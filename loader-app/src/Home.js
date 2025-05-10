@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react';
 import ListComponent from './ListComponent';
+// import PaginatedList from './PaginatedList';
 
 const Home = () => {
-  const [files, setFiles] = useState('');
-
+  
   const handleDelete = (id) => {
     const newFiles = files.filter((file) => file.id !== id);
     setFiles(newFiles);
   }
-
+  
   const [ name, setName ] = useState('Ishaq');
+  const [files, setFiles] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -45,6 +46,7 @@ const Home = () => {
 
   return ( 
     <div className="home">
+      <h1>Welcome to the Loader App</h1>
       <h4>{ name }</h4>
       <button onClick={nameChangeFn} >Change Name</button>
       {error && <div className="error">{ error }</div>}
@@ -52,6 +54,8 @@ const Home = () => {
       {
         files && <ListComponent files={ files } handleDelete={ handleDelete } />
       }
+      {/* {files && <PaginatedList data={ files }/>} */}
+      
     </div>
    );
 }

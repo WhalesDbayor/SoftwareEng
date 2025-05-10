@@ -1,16 +1,26 @@
 import './App.css';
+import Create from './Create';
 import Home from './Home';
 import NavBar from './NavBar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <div className="content">
-        <h1>Welcome to the Loader App</h1>
-        <Home />
+    <Router>
+      <div className="App">
+        <NavBar />
+        <div className="content">
+          <Routes>
+            <Route exact path="/" element={<Home />}>
+              {/* <Home /> */}
+            </Route>
+            <Route path="/create" element={<Create />}> 
+              {/* <Create /> */}
+            </Route>
+          </Routes>
+        </div>
       </div>
-    </div>
+    </Router>
   );
 }
 
