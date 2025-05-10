@@ -1,8 +1,10 @@
 import './App.css';
+import ContentList from './ContentList';
 import Create from './Create';
 import Home from './Home';
 import NavBar from './NavBar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 function App() {
   return (
@@ -12,10 +14,10 @@ function App() {
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Home />}>
-              {/* <Home /> */}
             </Route>
             <Route path="/create" element={<Create />}> 
-              {/* <Create /> */}
+            </Route>
+            <Route path="/content/:id" element={<ContentList />}> 
             </Route>
           </Routes>
         </div>

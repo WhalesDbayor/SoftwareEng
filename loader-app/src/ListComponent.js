@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 const ListComponent = ({ files, handleDelete }) => {
 
@@ -42,8 +44,10 @@ const ListComponent = ({ files, handleDelete }) => {
                 ) : 
                 (
                   <ul>
-                    <li><h4>{ file.title }</h4></li>
-                    <li><p>{ file.body }</p></li>
+                    <Link to={`/content/${file.id}`}>
+                      <li><h4>{ file.title }</h4></li>
+                      <li><p>{ file.body }</p></li>
+                    </Link>
                     <li><button onClick={() => handleDelete(file.id)}>Delete</button></li>
                   </ul>
                 )
@@ -53,7 +57,7 @@ const ListComponent = ({ files, handleDelete }) => {
         }
       </div>
 
-      <div>
+      <div className="pagination">
         <button onClick={prevPage} disabled={currentPage === 1}>Prev</button>
         {[...Array(totalPages).keys()].map(number => (
           <button
